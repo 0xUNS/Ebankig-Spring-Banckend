@@ -1,5 +1,6 @@
 package com.example.ebankingbackend;
 
+import com.example.ebankingbackend.dtos.CustomerDTO;
 import com.example.ebankingbackend.entities.*;
 import com.example.ebankingbackend.enumes.AccountStatus;
 import com.example.ebankingbackend.enumes.OperationType;
@@ -79,11 +80,11 @@ public class EbankingBackendApplication {
 		return args -> {
 			Stream.of("Hassan", "Imane", "Mohamed").forEach(name->{
 
-				Customer customer = new Customer();
-				customer.setName(name);
-				customer.setEmail(name+"@gmail.com");
+				CustomerDTO customerDTO = new CustomerDTO();
+				customerDTO.setName(name);
+				customerDTO.setEmail(name+"@gmail.com");
 
-				bankAccountService.saveCustomer(customer);
+				bankAccountService.saveCustomer(customerDTO);
 			});
 
 			bankAccountService.listCustomers().forEach(customer->{
@@ -102,6 +103,11 @@ public class EbankingBackendApplication {
 			for (BankAccount bankAccount:bankAccounts){
 				for (int i = 0; i < 10; i++) {
 					String accountId;
+//					if (bankAccount instanceof SavingBankAccount){
+//						accountId=((SavingBankAccount) bankAccount).getId();
+//					} else {
+//						accountId = ((CurrentBankAccount) bankAccount).getId();
+//					}
 					accountId = bankAccount.getId();
 					bankAccountService.credit(accountId,10000+Math.random()*120000,"Credit");
 					bankAccountService.debit(accountId,1000+Math.random()*9000,"Debit");
