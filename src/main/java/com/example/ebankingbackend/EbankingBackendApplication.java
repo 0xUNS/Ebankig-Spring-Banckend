@@ -12,7 +12,6 @@ import com.example.ebankingbackend.repositories.AccountOperationRepository;
 import com.example.ebankingbackend.repositories.BankAccountRepository;
 import com.example.ebankingbackend.repositories.CustomerRepository;
 import com.example.ebankingbackend.services.BankAccountService;
-import com.example.ebankingbackend.services.BankService;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -81,7 +80,7 @@ public class EbankingBackendApplication {
 	@Bean
 	CommandLineRunner commandLineRunner(BankAccountService bankAccountService) {
 		return args -> {
-			Stream.of("Hassan", "Imane", "Mohamed").forEach(name->{
+			Stream.of("Hassan", "Imane", "Mohamed", "Saad", "Sanae", "Omar").forEach(name->{
 
 				CustomerDTO customerDTO = new CustomerDTO();
 				customerDTO.setName(name);
