@@ -1,7 +1,6 @@
 package com.example.ebankingbackend.dtos;
 
 import lombok.Data;
-
 import java.util.List;
 
 @Data
@@ -11,5 +10,7 @@ public class AccountHistoryDTO {
 	private int currentPage;
 	private int totalPages;
 	private int pageSize;
+	private int totalOperations;
+	private int currentPageOperations;
 	private List<AccountOperationDTO> accountOperationDTOS;
 }

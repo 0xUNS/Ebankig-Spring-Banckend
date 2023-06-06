@@ -94,6 +94,23 @@ public class EbankingBackendApplication {
 				try {
 					bankAccountService.saveCurrentBankAccount(Math.random()*90000,9000,customer.getId());
 					bankAccountService.saveSavingBankAccount(Math.random()*120000,5.5,customer.getId());
+					bankAccountService.saveSavingBankAccount(Math.random()*120000,7.5,customer.getId());
+					bankAccountService.saveCurrentBankAccount(Math.random()*90000,7000,customer.getId());
+					bankAccountService.saveCurrentBankAccount(Math.random()*90000,6000,customer.getId());
+					bankAccountService.saveSavingBankAccount(Math.random()*120000,3.5,customer.getId());
+					bankAccountService.saveCurrentBankAccount(Math.random()*90000,3999,customer.getId());
+					bankAccountService.saveCurrentBankAccount(Math.random()*90000,9000,customer.getId());
+					bankAccountService.saveSavingBankAccount(Math.random()*120000,5.5,customer.getId());
+					bankAccountService.saveSavingBankAccount(Math.random()*120000,7.5,customer.getId());
+					bankAccountService.saveCurrentBankAccount(Math.random()*90000,7000,customer.getId());
+					bankAccountService.saveCurrentBankAccount(Math.random()*90000,6000,customer.getId());
+					bankAccountService.saveSavingBankAccount(Math.random()*120000,3.5,customer.getId());
+					bankAccountService.saveCurrentBankAccount(Math.random()*90000,3999,customer.getId());
+					bankAccountService.saveSavingBankAccount(Math.random()*120000,7.5,customer.getId());
+					bankAccountService.saveCurrentBankAccount(Math.random()*90000,7000,customer.getId());
+					bankAccountService.saveCurrentBankAccount(Math.random()*90000,6000,customer.getId());
+					bankAccountService.saveSavingBankAccount(Math.random()*120000,3.5,customer.getId());
+					bankAccountService.saveCurrentBankAccount(Math.random()*90000,3999,customer.getId());
 
 				} catch (CustomerNotFoundException e) {
 					e.printStackTrace();
