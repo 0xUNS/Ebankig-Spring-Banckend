@@ -8,6 +8,7 @@ import com.example.ebankingbackend.entities.SavingAccount;
 import com.example.ebankingbackend.exceptions.BalanceNotSufficientException;
 import com.example.ebankingbackend.exceptions.BankAccountNotFoundException;
 import com.example.ebankingbackend.exceptions.CustomerNotFoundException;
+import org.springframework.data.domain.Pageable;
 
 import java.util.List;
 
@@ -29,15 +30,9 @@ public interface BankAccountService {
 
 	void deleteCustomer(Long customerId);
 
-	List<AccountOperationDTO> accountHistory(String accountId);
-
-	AccountHistoryDTO getAccountHistory(String accountId, int page, int size) throws BankAccountNotFoundException/*
-	@Override
-	public List<CustomerDTO> searchCustomers(String keyword) {
-		List<Customer> customers=customerRepository.searchCustomer(keyword);
-		List<CustomerDTO> customerDTOS = customers.stream().map(cust -> dtoMapper.fromCustomer(cust)).collect(Collectors.toList());
-		return customerDTOS;
-	}*/;
+	AccountHistoryDTO getAccountHistory(String accountId, int page, int size) throws BankAccountNotFoundException;
 
 	List<CustomerDTO> searchCustomers(String keyword);
+
+	BankAccountByCustomerDTO BANK_ACCOUNT_BY_CUSTOMER(Long customerId, int page, int size) throws CustomerNotFoundException;
 }

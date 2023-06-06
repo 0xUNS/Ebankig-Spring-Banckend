@@ -1,6 +1,8 @@
 package com.example.ebankingbackend.web;
 
+import com.example.ebankingbackend.dtos.BankAccountByCustomerDTO;
 import com.example.ebankingbackend.dtos.CustomerDTO;
+import com.example.ebankingbackend.exceptions.BankAccountNotFoundException;
 import com.example.ebankingbackend.exceptions.CustomerNotFoundException;
 import com.example.ebankingbackend.services.BankAccountService;
 import lombok.AllArgsConstructor;
@@ -24,7 +26,7 @@ public class CustomerRestController {
 		return bankAccountService.listCustomers();
 	}
 	@GetMapping("/customers/search")
-	public List<CustomerDTO> searchCustomers(@RequestParam(name = "keyword",defaultValue = "") String keyword){
+	public List<CustomerDTO> searchCustomers(@RequestParam(name = "keyword", defaultValue = "") String keyword){
 		return bankAccountService.searchCustomers("%"+keyword+"%");
 	}
 	@GetMapping("/customers/{id}")
@@ -43,5 +45,13 @@ public class CustomerRestController {
 	@DeleteMapping("/customers/{id}")
 	public void deleteCustomer(@PathVariable Long id){
 		bankAccountService.deleteCustomer(id);
+	}
+
+	@GetMapping("/customer-accounts/{customerId}")
+	public BankAccountByCustomerDTO getBankAccountsByCustomer(
+			@PathVariable Long customerId,
+			@RequestParam(name="page",defaultValue = "0") int page,
+			@RequestParam(name="size",defaultValue = "5") int size) throws CustomerNotFoundException {
+		return bankAccountService.BANK_ACCOUNT_BY_CUSTOMER(customerId, page, size);
 	}
 }

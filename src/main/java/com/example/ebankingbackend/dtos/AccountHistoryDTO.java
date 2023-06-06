@@ -1,7 +1,6 @@
 package com.example.ebankingbackend.dtos;
 
 import lombok.Data;
-
 import java.util.List;
 
 @Data
