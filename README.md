@@ -1,11 +1,11 @@
 # Ebankig-Spring-Banckend
 
-![](https://img.icons8.com/?size=20&id=AZOZNnY73haj) [Backend: Ebanking-Spring](https://github.com/0xUNS/Ebankig-Spring-Banckend)
+![](https://img.icons8.com/?size=20&id=AZOZNnY73haj) [Backend: Ebanking-Spring](https://github.com/0xUNS/Ebanking-Spring-Banckend)
 
-![](https://img.icons8.com/?size=20&id=AZOZNnY73haj) [Frontend: Ebanking-Angular](https://github.com/0xUNS/Ebankig-Angular-Frontend)
+![](https://img.icons8.com/?size=20&id=AZOZNnY73haj) [Frontend: Ebanking-Angular](https://github.com/0xUNS/Ebanking-Angular-Frontend)
 
 
-![](https://img.icons8.com/?size=100&id=GPfHz0SM85FX) Java  |   ![](https://img.icons8.com/?size=100&id=90519) Spring Boot
+![](https://img.icons8.com/?size=50&id=GPfHz0SM85FX) Java  |   ![](https://img.icons8.com/?size=50&id=90519) Spring Boot
 
 
 # ![](https://img.icons8.com/?size=30&id=Q4PBGTVYTpx8) Schema
@@ -42,7 +42,9 @@
 }
 ```
 
-*Request body : required*
+[^Request body]: required
+
+Other methods
 
 - `PUT` : 	/customers
 - `GET` : 	/accounts/{accountId}
@@ -119,4 +121,4 @@ CMD ["java", "-jar", "ebanking-backend.jar"]
 
 # ![](https://img.icons8.com/?size=30&id=3FDJsdSpK6cv) Deployment
 
-[On Render :](https://ebank-backend.onrender.com/) [ebank-backend.onrender.com](https://ebank-backend.onrender.com/)	[](https://img.icons8.com/?size=20&id=ZzYf4SXUhPDd) " using Docker container "
+[On Render : ebank-backend.onrender.com](https://ebank-backend.onrender.com/)	" using Docker container ![](https://img.icons8.com/?size=20&id=ZzYf4SXUhPDd) "
